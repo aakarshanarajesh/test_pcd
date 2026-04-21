@@ -34,12 +34,24 @@ body {
 .app-nav {
   background: #0b1320;
   color: white;
-  padding: 12px 20px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(2,6,23,0.25);
 }
-.app-nav .nav-link { color: white; text-decoration: none; margin-right: 12px; }
+.app-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 160ms ease, transform 160ms ease;
+}
+.app-nav .nav-link:hover { background: rgba(255,255,255,0.05); transform: translateY(-1px); }
+.app-nav .nav-link:focus { outline: 2px solid rgba(255,255,255,0.12); }
+.app-nav .nav-link.active { background: rgba(255,255,255,0.08); font-weight:600; }
 
 /* Order card */
 .order-link { text-decoration: none; color: inherit; }
